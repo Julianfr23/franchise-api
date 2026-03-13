@@ -1,0 +1,14 @@
+target/
+.mvn/
+*.class
+*.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+.env
+*.tfvars
+!example.tfvars
+.terraform/
+*.tfstate
+*.tfstate.backup
+.idea/
+*.iml

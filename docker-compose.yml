@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:7.0
+    container_name: franchise-mongodb
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: rootpassword
+      MONGO_INITDB_DATABASE: franchisedb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    networks:
+      - franchise-network
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  franchise-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: franchise-api
+    environment:
+      MONGO_URI: mongodb://root:rootpassword@mongodb:27017/franchisedb?authSource=admin
+      MONGO_DB: franchisedb
+      PORT: 8080
+    ports:
+      - "8080:8080"
+    depends_on:
+      mongodb:
+        condition: service_healthy
+    networks:
+      - franchise-network
+
+networks:
+  franchise-network:
+    driver: bridge
+
+volumes:
+  mongo_data:

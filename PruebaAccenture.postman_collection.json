@@ -1,0 +1,299 @@
+{
+  "info": {
+    "_postman_id": "e8cc26e2-4f2f-49d6-a030-b551e53e092f",
+    "name": "PruebaAccenture",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "33484561"
+  },
+  "item": [
+    {
+      "name": "Agregar Franquicia",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"McDonald Colombia\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/v1/franchises",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "franchises"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Agregar Sucursal",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Sucursal Bogotá\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/v1/franchises/3dcc83f0-1f0c-43c2-851d-f4d22604024f/branches",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "franchises",
+            "3dcc83f0-1f0c-43c2-851d-f4d22604024f",
+            "branches"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Agregar Producto",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Big Mac\",\r\n  \"stock\": 150\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/v1/franchises/3dcc83f0-1f0c-43c2-851d-f4d22604024f/branches/d3790ee5-cd28-428d-a958-37149280314f/products",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "franchises",
+            "3dcc83f0-1f0c-43c2-851d-f4d22604024f",
+            "branches",
+            "d3790ee5-cd28-428d-a958-37149280314f",
+            "products"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Traer Producto Mayor",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/v1/franchises/3dcc83f0-1f0c-43c2-851d-f4d22604024f/top-stock-products",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "franchises",
+            "3dcc83f0-1f0c-43c2-851d-f4d22604024f",
+            "top-stock-products"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Actualizar Stoke",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{ \"stock\": 999 }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/v1/franchises/3dcc83f0-1f0c-43c2-851d-f4d22604024f/branches/d3790ee5-cd28-428d-a958-37149280314f/products/5de3e638-9c1c-4eb7-bcde-59692765ee69/stock",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "franchises",
+            "3dcc83f0-1f0c-43c2-851d-f4d22604024f",
+            "branches",
+            "d3790ee5-cd28-428d-a958-37149280314f",
+            "products",
+            "5de3e638-9c1c-4eb7-bcde-59692765ee69",
+            "stock"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Actualizar Nombre Producto",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{ \"stock\": 999 }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/v1/franchises/3dcc83f0-1f0c-43c2-851d-f4d22604024f/branches/d3790ee5-cd28-428d-a958-37149280314f/products/5de3e638-9c1c-4eb7-bcde-59692765ee69/stock",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "franchises",
+            "3dcc83f0-1f0c-43c2-851d-f4d22604024f",
+            "branches",
+            "d3790ee5-cd28-428d-a958-37149280314f",
+            "products",
+            "5de3e638-9c1c-4eb7-bcde-59692765ee69",
+            "stock"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Actualizar Nombre Sucursal",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{ \"stock\": 999 }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/v1/franchises/3dcc83f0-1f0c-43c2-851d-f4d22604024f/branches/d3790ee5-cd28-428d-a958-37149280314f/products/5de3e638-9c1c-4eb7-bcde-59692765ee69/stock",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "franchises",
+            "3dcc83f0-1f0c-43c2-851d-f4d22604024f",
+            "branches",
+            "d3790ee5-cd28-428d-a958-37149280314f",
+            "products",
+            "5de3e638-9c1c-4eb7-bcde-59692765ee69",
+            "stock"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Actualizar Nombre Franquicia",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{ \"stock\": 999 }",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/v1/franchises/3dcc83f0-1f0c-43c2-851d-f4d22604024f/branches/d3790ee5-cd28-428d-a958-37149280314f/products/5de3e638-9c1c-4eb7-bcde-59692765ee69/stock",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "franchises",
+            "3dcc83f0-1f0c-43c2-851d-f4d22604024f",
+            "branches",
+            "d3790ee5-cd28-428d-a958-37149280314f",
+            "products",
+            "5de3e638-9c1c-4eb7-bcde-59692765ee69",
+            "stock"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Eliminar Producto",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/v1/franchises/3dcc83f0-1f0c-43c2-851d-f4d22604024f/branches/d3790ee5-cd28-428d-a958-37149280314f/products/5de3e638-9c1c-4eb7-bcde-59692765ee69",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "franchises",
+            "3dcc83f0-1f0c-43c2-851d-f4d22604024f",
+            "branches",
+            "d3790ee5-cd28-428d-a958-37149280314f",
+            "products",
+            "5de3e638-9c1c-4eb7-bcde-59692765ee69"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
